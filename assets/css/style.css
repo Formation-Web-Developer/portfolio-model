@@ -1,0 +1,434 @@
+@font-face{
+    font-family: 'Lato Regular';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
+:root{
+    --color-one: #999999;
+    --color-two: #575757;
+    --color-three: #303030;
+    --color-four: #d3d1d1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lato Regular';
+    color: var(--color-one);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, li a{
+    font-weight: normal;
+}
+
+input, button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu label, .search label, button
+{
+    cursor: pointer;
+}
+
+.mtb-1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text-white, li a, li a i{
+    color: white
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-italic{
+    font-style: italic;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.text-spacing{
+    letter-spacing: .7rem;
+}
+
+.bg-fully{
+    height: 20rem;
+    position: relative;
+}
+
+.bg-parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-dark{
+    background-color: black;
+    color: white;
+    padding: .7rem;
+}
+
+.text-big-2{
+    font-size: 2rem;
+}
+
+.text-big-1{
+    font-size: 1.5rem;
+}
+
+.text-small{
+    font-size: .7rem;
+}
+
+.w-100, img{
+    width: 100%;
+}
+
+i, .dark{
+    color: var(--color-two)
+}
+
+.hidden{
+    display: none;
+}
+
+/* NAV BAR */
+
+.nav-menu{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+}
+
+.scrolled{
+    background-color: white;
+    box-shadow: 0 .7rem .7rem 0;
+}
+
+.nav-menu label, .menu li{
+    padding: .5rem 1rem;
+}
+
+#burger-menu:checked ~ .menu-burger .fa-times{
+    display: inline-block;
+}
+
+#burger-menu:not(:checked) ~ .menu-burger .fa-bars{
+    display: inline-block;
+}
+
+.menu{
+    overflow: hidden;
+    position: absolute;
+    background-color: var(--color-one);
+    transition: .5s;
+    top: 100%;
+    width: 0;
+}
+
+.nav-menu input[type="checkbox"]:checked ~ .menu{
+    width: 100%;
+}
+
+.menu li{
+    display: block;
+    white-space: nowrap;
+}
+
+.search{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#search{
+    transition: .5s;
+    width: 0;
+    height: fit-content;
+    padding: .2rem 0 .3rem .2rem;
+    font-size: 1.2rem;
+}
+
+.search input[type="checkbox"]:checked ~ #search{
+    width: 100%;
+    border-bottom: 1px solid var(--color-two);
+}
+
+.col{
+    padding: 2rem .7rem;
+    text-align: justify;
+}
+
+/* BG HEADER + H1 */
+
+#headerImg{
+    height: 25rem;
+    background-image: url('../img/parallax1.jpg');
+}
+
+/* SECTION ABOUT */
+
+.skill > p{
+    overflow-x: hidden;
+}
+
+.skill > div{
+    position: relative;
+    background-color: var(--color-four);
+    height: 2.3rem;
+    margin-top: .5rem;
+}
+
+.skill div > p, .skill .bar{
+    position: absolute;
+}
+
+.skill .bar{
+    background-color: var(--color-three);
+    height: 100%;
+    left: 0;
+}
+
+.bar-1{
+    width: 90%;
+}
+
+.bar-2{
+    width: 85%;
+}
+
+.bar-3{
+    width: 75%;
+}
+
+/* STATS */
+
+.stats{
+    background-color: var(--color-three);
+    color: white;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.stat{
+    width: 50%;
+    padding: 2rem 0;
+}
+
+.stat-count{
+    font-size: 1rem;
+}
+
+.stat-name{
+    font-size: .7rem;
+}
+
+/* SECTION PORTFOLIO */
+
+.portfolio{
+    background-image: url('../img/parallax2.jpg');
+}
+
+.work{
+    width: 50%;
+    padding: .5rem;
+}
+
+.btn{
+    font-size: 1.2rem;
+    padding: .7rem;
+    background-color: var(--color-four);
+    display: block;
+    margin: 3rem auto;
+}
+
+/* CONTACT */
+.contact{
+    background-image: url('../img/parallax3.jpg');
+}
+
+#googleMap{
+    width: 100%;
+    height: 15rem;
+}
+
+.contact-info{
+    width: 100%;
+    padding: .8rem 0;
+}
+
+.contact-line i{
+    width: 1.5rem;
+}
+
+.contact-line{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: .5rem 0;
+}
+
+.contact-info > P{
+    margin: 1rem 0;
+}
+
+form input{
+    width: 100%;
+    margin: .2rem 0;
+    height: 2rem;
+    border: 1px solid var(--color-four);
+    padding: .5rem;
+}
+
+form button{
+    border: none;
+    margin: .5rem 0;
+    margin-left: auto;
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #656565;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+footer a{
+    background-color: rgb(241, 241, 241);
+    color: gray;
+    padding: .5rem 1rem;
+}
+
+footer a i{
+    padding-right: .5rem;
+}
+
+.social i{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social{
+    margin: 1rem 0;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 578px){
+    /* STATS */
+    .stat{
+        width: 25%;
+    }
+
+    /* WORK */
+    .work{
+        width: 25%;
+    }
+
+    /* form */
+    form{
+        justify-content: space-between;
+    }
+
+    form input.w-50{
+        width: 49%;
+    }
+
+    form button{
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 768px){
+    /* DIVERS */
+    .col{
+        width: 70%;
+        margin: auto;
+    }
+
+    /* NAV BAR*/
+    .menu-burger{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+        width: auto;
+        position: initial;
+        background-color: transparent;
+    }
+
+    .menu li{
+        border-bottom: 1px solid transparent;
+    }
+
+    .menu a, .menu a i{
+        color: var(--color-secondary);
+    }
+
+    .menu li:hover{
+        border-bottom: 1px solid var(--color-secondary);
+    }
+
+    /* SECTION ABOUT */
+
+    .author{
+        margin: 3rem 0;
+    }
+    
+    .author-misc, .author > p{
+        width: 50%;
+        padding: .7rem;
+    }
+
+    /* SECTION CONTACT */
+
+    #googleMap{
+        width: 30%;
+        height: 10rem;
+    }
+
+    .contact-info{
+        width: 70%;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <link href="assets/fontawesome/css/all.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        
+        <header>
+
+            <nav class="nav-menu w-100" id="nav">
+
+                <input type="checkbox" id="burger-menu" class="hidden">
+
+                <label for="burger-menu" class="menu-burger text-big-1">
+                    <i class="fas fa-bars hidden"></i>
+                    <i class="fas fa-times hidden"></i>
+                </label>
+
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-th"></i> Portfolio</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+
+                <div class="search">
+                    <label for="checkboxSearch"><i class="fas fa-search text-big-1"></i></label>
+                    <input type="checkbox" id="checkboxSearch" class="hidden">
+                    <input type="text" id="search" name="search" placeholder="Rechercher...">
+                </div>
+            </nav>
+
+            <div id="headerImg" class="flex-center bg-parallax">
+                <h1 class="bg-dark text-center text-uppercase text-big-1">My Website Logo</h1>
+            </div>
+
+        </header>
+
+        <section id="about">
+
+            <div class="col">
+                <h2 class="text-center mtb-1 dark">About me</h2>
+
+                <p class="text-center text-italic mtb-1">I love photography</p>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam iusto provident rerum dolorum impedit. Facere, quis eius sunt in natus ab culpa deleniti maiores quaerat quam provident optio impedit commodi?
+                Vitae molestiae similique facilis itaque quo impedit neque assumenda, autem aut. Odio reprehenderit mollitia dolores sapiente reiciendis voluptatem? Aut quia provident modi obcaecati vero ratione similique maiores voluptates incidunt commodi!
+                Ea exercitationem obcaecati reprehenderit eaque cupiditate, dignissimos quas necessitatibus natus laboriosam nostrum minima atque quam non eveniet itaque, officia laudantium aperiam delectus nisi sint dolore maiores facere fuga numquam. Aspernatur!</p>
+
+                <div class="author flex-wrap">
+                    <div class="author-misc w-100">
+                        <h3 class="text-dark text-center mtb-1"><i class="fas fa-user"></i> My Name</h3>
+                        <img src="assets/img/avatar_hat.jpg" alt="Photo de profile">
+                    </div>
+                    <p class="mtb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos blanditiis, doloribus sequi porro velit inventore eius quibusdam. Vero possimus, eveniet sequi voluptate quae non qui rem fugit ab esse?Aliquid, sint dolores tempora, earum, ut eos reiciendis sunt tempore nulla voluptates unde dicta error deleniti! Minus, repellat vel officiis laudantium commodi deleniti facere delectus, eum quod, repellendus in harum?</p>
+                </div>
+
+                <p class="text-center text-dark mbt-1">Im really good at:</p>
+
+                <div>
+                    <div class="skill mtb-1">
+                        <p class="text-spacing"><i class="fas fa-camera"></i>Photographiy</p>
+                        <div class="flex-center">
+                            <div class="bar bar-1"></div>
+                            <p>90%</p>
+                        </div>
+                    </div>
+
+                    <div class="skill mtb-1">
+                        <p class="text-spacing"><i class="fas fa-laptop"></i>Web Design</p>
+                        <div class="flex-center">
+                            <div class="bar bar-2"></div>
+                            <p>85%</p>
+                        </div>
+                    </div>
+
+                    <div class="skill mtb-1">
+                        <p class="text-spacing"><i class="far fa-image"></i>Photoshop</p>
+                        <div class="flex-center">
+                            <div class="bar bar-3"></div>
+                            <p>75%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="stats flex-wrap">
+            <div class="stat">
+                <p class="stat-count">14+</p>
+                <p class="stat-name">Partners</p>
+            </div>
+
+            <div class="stat">
+                <p class="stat-count">55+</p>
+                <p class="stat-name">Project Done</p>
+            </div>
+
+            <div class="stat">
+                <p class="stat-count">89+</p>
+                <p class="stat-name">Happy Clients</p>
+            </div>
+
+            <div class="stat">
+                <p class="stat-count">150+</p>
+                <p class="stat-name">Mettings</p>
+            </div>
+        </div>
+
+        <section id="portfolio">
+            <div class="portfolio bg-fully bg-parallax flex-center">
+                <h2 class="text-white text-uppercase text-big-2">Portfolio</h2>
+            </div>
+            <div class="col">
+                <p class="dark text-center text-big-1 mtb-1">My Work</p>
+                <p class="text-center text-small text-italic mtb-1">Here are of my latest lorem work ipsum tipsum.</p>
+                <p class="text-center text-small text-italic mtb-1">Click on the images to make them bigger</p>
+
+                <div class="flex-wrap">
+                    <img src="assets/img/p1.jpg" alt="" class="work">
+                    <img src="assets/img/p2.jpg" alt="" class="work">
+                    <img src="assets/img/p3.jpg" alt="" class="work">
+                    <img src="assets/img/p4.jpg" alt="" class="work">
+                    <img src="assets/img/p5.jpg" alt="" class="work">
+                    <img src="assets/img/p6.jpg" alt="" class="work">
+                    <img src="assets/img/p7.jpg" alt="" class="work">
+                    <img src="assets/img/p8.jpg" alt="" class="work">
+                </div>
+
+                <button class="btn text-uppercase">Load More</button>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact bg-fully bg-parallax flex-center">
+                <h2 class="text-white text-uppercase text-big-2">Contact</h2>
+            </div>
+            <div class="col">
+                <p class="dark text-center text-big-1 mtb-1">Where I Work</p>
+                <p class="text-center text-small text-italic mtb-1">I'd love your feedback!</p>
+
+                <div class="contact-misc flex-wrap">
+                    
+                    <div id="googleMap" class="w-100"></div>
+
+                    <div class="contact-info">
+                        <div class="contact-line">
+                            <i class="fas fa-map-marker-alt"></i><p>Chicago, US</p>
+                        </div>
+                        <div class="contact-line">
+                            <i class="fas fa-phone"></i> <p>Phone: +00 151515</p>
+                        </div>
+                        <div class="contact-line">
+                            <i class="fas fa-envelope"></i> <p>Email: mail@mail.com</p>
+                        </div>
+
+                        <p class="text-small text-italic">Swing by for a cup of <i class="fas fa-coffee"></i>, or leave me a note:</p>
+                        <form action="" method="POST" class="flex-wrap">
+                            <input type="text" name="name" placeholder="Name" class="w-50">
+                            <input type="email" name="email" placeholder="Email" class="w-50">
+                            <input type="text" name="message" placeholder="Message">
+                            <button class="bg-dark"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <a href="#"><i class="fas fa-arrow-up"></i> To the top</a>
+            <div class="social">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-snapchat"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+            <p>Powered by Name</p>
+        </footer>
+
+        <script>
+            function showMap() {
+                new google.maps.Map(document.getElementById("googleMap"), {
+                    center: new google.maps.LatLng(41.881832, -87.623177),
+                    zoom: 11,
+                });
+            }
+        </script>
+
+        <!-- 
+            URL TO CALL THE GOOGLE API TO DISPLAY THE GOOGLE MAP BY CALLING THE showMap FUNCTION ABOVE.
+            THE KEY IS PRIVATE!!! DON'T LEAK PLEASE!!!
+        -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYCZZq6t8PsonTtNomkSHY0LglXuwNcIk&callback=showMap"></script>
+
+        <script>
+            window.onscroll = () => {
+                console.log(window.scrollY);
+                if(window.scrollY > 300){
+                    document.getElementById('nav').classList.add('scrolled');
+                }else{
+                    document.getElementById('nav').classList.remove('scrolled');
+                }
+            };
+        </script>
+    </body>
+</html>
