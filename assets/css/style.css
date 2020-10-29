@@ -61,7 +61,7 @@ input, button{
     margin-bottom: 1rem;
 }
 
-.text-white, li a, li a i{
+.text-white, li a, li a i, button i{
     color: white
 }
 
