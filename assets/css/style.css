@@ -321,6 +321,11 @@ form button{
     width: 100%;
 }
 
+/* OPACITY */
+#contact, #portfolio{
+    filter: opacity(.8);
+}
+
 /* FOOTER */
 
 footer{
