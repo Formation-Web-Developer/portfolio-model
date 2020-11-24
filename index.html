@@ -9,6 +9,13 @@
         <link rel="stylesheet" href="assets/css/style.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--
+            URL TO CALL THE GOOGLE API TO DISPLAY THE GOOGLE MAP BY CALLING THE showMap FUNCTION ABOVE.
+            THE KEY IS PRIVATE!!! DON'T LEAK PLEASE!!!
+        -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYCZZq6t8PsonTtNomkSHY0LglXuwNcIk&callback=showMap" defer></script>
+        <script src="assets/js/app.js"></script>
+        
     </head>
     <body>
         
@@ -73,7 +80,7 @@
                     <div class="skill mtb-1">
                         <p class="text-spacing"><i class="fas fa-camera"></i>Photographiy</p>
                         <div class="flex-center">
-                            <div class="bar" data-progress="90"></div>
+                            <div class="bar" data-progress="90%"></div>
                             <p>90%</p>
                         </div>
                     </div>
@@ -81,7 +88,7 @@
                     <div class="skill mtb-1">
                         <p class="text-spacing"><i class="fas fa-laptop"></i>Web Design</p>
                         <div class="flex-center">
-                            <div class="bar" data-progress="85"></div>
+                            <div class="bar" data-progress="85%"></div>
                             <p>85%</p>
                         </div>
                     </div>
@@ -89,7 +96,7 @@
                     <div class="skill mtb-1">
                         <p class="text-spacing"><i class="far fa-image"></i>Photoshop</p>
                         <div class="flex-center">
-                            <div class="bar" data-progress="75"></div>
+                            <div class="bar" data-progress="75%"></div>
                             <p>75%</p>
                         </div>
                     </div>
@@ -191,31 +198,5 @@
             </div>
             <p>Powered by Name</p>
         </footer>
-
-        <script>
-            function showMap() {
-                new google.maps.Map(document.getElementById("googleMap"), {
-                    center: new google.maps.LatLng(41.881832, -87.623177),
-                    zoom: 11,
-                });
-            }
-        </script>
-
-        <!-- 
-            URL TO CALL THE GOOGLE API TO DISPLAY THE GOOGLE MAP BY CALLING THE showMap FUNCTION ABOVE.
-            THE KEY IS PRIVATE!!! DON'T LEAK PLEASE!!!
-        -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYCZZq6t8PsonTtNomkSHY0LglXuwNcIk&callback=showMap"></script>
-
-        <script>
-            window.onscroll = () => {
-                if(window.scrollY > 300){
-                    document.getElementById('nav').classList.add('scrolled');
-                }else{
-                    document.getElementById('nav').classList.remove('scrolled');
-                }
-            };
-        </script>
-        <script src="assets/js/app.js"></script>
     </body>
 </html>

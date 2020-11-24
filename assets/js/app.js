@@ -1,9 +1,55 @@
 jQuery(($) => {
     clickMore();
-
     carrouselAnimation(['parallax1.jpg', 'parallax2.jpg', 'parallax3.jpg'], 1000, {opacity: 1}, {opacity: 0}, 3000);
-    barAnimation($('.bar'), 1000, .75);
+    scrollHandler([{handler: barListener}, {handler: headerListener}]);
 });
+
+/**
+ * @param {$ObjMap[]} handlers
+ * @param {function(number, number)} handlers[].handler
+ * @param {boolean} handlers[].repeat
+ */
+function scrollHandler(handlers){
+    const $w = $(window);
+    $w.scroll(() => {
+        if(handlers.length === 0){
+            $w.unbind('scroll');
+            return;
+        }
+        let i = 0;
+        while (i < handlers.length){
+            if(handlers[i].handler($w.scrollTop(), $w.height())){
+                handlers.splice(i, 1);
+                i--;
+            }
+            i++;
+        }
+    })
+}
+
+/** @param {number} scrollTop
+  * @param {number} height
+  * @returns {boolean|undefined}*/
+function headerListener(scrollTop, height){
+    if(scrollTop > 300){
+        $('#nav').addClass('scrolled');
+    }else{
+        $('#nav').removeClass('scrolled');
+    }
+}
+
+/** @param {number} scrollTop
+  * @param {number} height
+  * @returns {boolean|undefined} */
+function barListener(scrollTop, height){
+    const bars = $('.bar');
+    if(scrollTop >= $(bars[0]).offset().top - (height * .75)){
+        barAnimation(bars, 1000, 250)
+        return true;
+    }
+    return false;
+}
+
 /** @param {string[]} imagePath
  * @param {number} speed
  * @param {$ObjMap} from
@@ -22,43 +68,38 @@ function carrouselAnimation(imagePath, speed, from, to, delay){
     setInterval(() => {
         index = (index+1)%imagePath.length;
         animate(firstChild, to, speed, () => {
-            firstChild.animate(to,1000, () => {
-                from['background-image'] = lastChild.css('background-image');
-                firstChild.css(from);
-                lastChild.css('background-image', `url("assets/img/${imagePath[index]}")`);
-            });
-        })
+            from['background-image'] = lastChild.css('background-image');
+            firstChild.css(from);
+            lastChild.css('background-image', `url("assets/img/${imagePath[index]}")`);
+        }, 0)
     }, delay);
 }
 
 /** @param {HTMLElement[]} bars
   * @param {number} speed
-  * @param {number=} offset - 0 à 1 */
-function barAnimation(bars, speed, offset = 1) {
+  * @param {number} interval */
+function barAnimation(bars, speed, interval) {
     if(bars.length === 0) return;
     const $w = $(window);
-    $w.scroll(() => {
-        if($w.scrollTop() >= $(bars[0]).offset().top - ($w.height() * offset)){
-            animateBarRecursive(bars, speed, 0);
-            $w.unbind('scroll');
-        }
-    })
+    for(let i = 0; i < bars.length; i++){
+        animateBar(bars[i], interval*i, speed);
+    }
 }
 
-/** @param {HTMLElement[]} bars
-  * @param {number} speed
-  * @param {number} index */
-function animateBarRecursive(bars, speed, index){
-    if(index >= bars.length) return;
-    animate($(bars[index]), {width: bars[index].dataset.progress+"%"}, speed, () => animateBarRecursive(bars, speed, index+1))
+/** @param {HTMLElement} bar
+  * @param {number} interval
+  * @param {number} speed */
+function animateBar(bar, interval, speed){
+    animate($(bar), {width: bar.dataset.progress}, speed, ()=>{}, interval);
 }
 
 /** @param {jQuery} element
  *  @param {$ObjMap} to
  *  @param {number} speed
- *  @param {function} complete */
-function animate(element, to, speed, complete){
-    element.animate(to, speed, complete);
+ *  @param {function} complete
+ *  @param {number=} delay */
+function animate(element, to, speed, complete, delay = 0){
+    element.delay(delay).animate(to, speed, complete);
 }
 
 function clickMore(){
@@ -71,5 +112,12 @@ function clickMore(){
             $(image).delay(x).fadeIn(1200);
             x+=150;
         }
+    });
+}
+
+function showMap() {
+    new google.maps.Map(document.getElementById("googleMap"), {
+        center: new google.maps.LatLng(41.881832, -87.623177),
+        zoom: 11,
     });
 }
