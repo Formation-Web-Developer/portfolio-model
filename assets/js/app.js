@@ -50,15 +50,19 @@ function barListener(scrollTop, height){
     return false;
 }
 
-/** @param {string[]} imagePath
- * @param {number} speed
- * @param {$ObjMap} from
- * @param {string|int} from.width
- * @param {int} from.opacity
- * @param {$ObjMap} to
- * @param {string|int} to.width
- * @param {int} to.opacity
- * @param {number} delay */
+/**
+ * @param {string[]}    imagePath
+ * @param {number}      speed
+ *
+ * @param {$ObjMap}     from
+ * @param {string|int}  from.width
+ * @param {int}         from.opacity
+ *
+ * @param {$ObjMap}     to
+ * @param {string|int}  to.width
+ * @param {int}         to.opacity
+ *
+ * @param {number}      delay */
 function carrouselAnimation(imagePath, speed, from, to, delay){
     const carrousel = $('.carrousel');
     const firstChild = carrousel.children('div:first-child');

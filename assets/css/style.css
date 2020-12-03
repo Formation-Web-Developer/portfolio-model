@@ -8,6 +8,8 @@
     --color-two: #575757;
     --color-three: #303030;
     --color-four: #d3d1d1;
+    --color-five: #fff;
+    --color-six: #000;
 }
 
 *{
@@ -62,7 +64,7 @@ input, button{
 }
 
 .text-white, li a, li a i, button i{
-    color: white
+    color: var(--color-five)
 }
 
 .text-center{
@@ -94,8 +96,8 @@ input, button{
 }
 
 .bg-dark{
-    background-color: black;
-    color: white;
+    background-color: var(--color-six);
+    color: var(--color-five);
     padding: .7rem;
 }
 
@@ -135,7 +137,7 @@ i, .dark{
 }
 
 .scrolled{
-    background-color: white;
+    background-color: var(--color-five);
     box-shadow: 0 .7rem .7rem 0;
 }
 
@@ -257,7 +259,7 @@ i, .dark{
 
 .stats{
     background-color: var(--color-three);
-    color: white;
+    color: var(--color-five);
     justify-content: space-evenly;
     text-align: center;
 }
@@ -353,12 +355,12 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: var(--color-five);
 }
 
 footer a{
     background-color: rgb(241, 241, 241);
-    color: gray;
+    color: var(--color-one);
     padding: .5rem 1rem;
 }
 
@@ -425,11 +427,11 @@ footer a i{
     }
 
     .menu a, .menu a i{
-        color: var(--color-secondary);
+        color: var(--color-two);
     }
 
     .menu li:hover{
-        border-bottom: 1px solid var(--color-secondary);
+        border-bottom: 1px solid var(--color-two);
     }
 
     /* SECTION ABOUT */
@@ -437,7 +439,7 @@ footer a i{
     .author{
         margin: 3rem 0;
     }
-    
+
     .author-misc, .author > p{
         width: 50%;
         padding: .7rem;
